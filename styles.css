@@ -17,10 +17,11 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center; /* Center navigation items */
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 1em;
 }
 
@@ -67,6 +68,14 @@ footer {
     background-color: rgba(139, 69, 19, 0.8); /* Semi-transparent brown background for better readability */
     padding: 20px;
     border-radius: 8px;
+    display: inline-block;
+}
+
+.home-gif {
+    margin-top: 20px;
+    width: 100%; /* Make the GIF responsive */
+    max-width: 300px; /* Set a max width */
+    border-radius: 8px;
 }
 
 /* Profile Section */
@@ -75,6 +84,7 @@ footer {
     align-items: center;
     gap: 20px;
     animation: fade-in-left 1s ease-out;
+    flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
 }
 
 .profile-photo {
@@ -177,5 +187,43 @@ footer {
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-photo {
+        margin-bottom: 20px;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .home-section {
+        padding: 50px 20px;
+    }
+
+    .home-content {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .home-gif {
+        max-width: 80%;
     }
 }
