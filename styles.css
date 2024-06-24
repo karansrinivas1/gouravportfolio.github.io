@@ -101,7 +101,7 @@ footer {
 }
 
 .profile-info {
-    max-width: 600px;
+    max-width: 1200px;
     text-align: justify;
     color: #333;
     animation: fade-in-right 1s ease-out;
