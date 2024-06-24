@@ -12,6 +12,7 @@ header {
     color: #ffffff; /* White text color for contrast */
     padding: 1em;
     animation: fade-in-down 1s ease-out;
+    text-align: center;
 }
 
 nav ul {
@@ -69,6 +70,8 @@ footer {
     padding: 20px;
     border-radius: 8px;
     display: inline-block;
+    max-width: 100%; /* Ensure it doesn't overflow */
+    box-sizing: border-box;
 }
 
 .home-gif {
@@ -94,13 +97,15 @@ footer {
     object-fit: cover;
     border: 3px solid #FFA500; /* Orange border around photo */
     animation: scale-up 1s ease-out;
+    margin-bottom: 20px; /* Add margin for spacing */
 }
 
 .profile-info {
-    max-width: 1200px;
+    max-width: 600px;
     text-align: justify;
     color: #333;
     animation: fade-in-right 1s ease-out;
+    flex: 1; /* Allow it to take up remaining space */
 }
 
 /* Contact Icons */
@@ -225,5 +230,37 @@ footer {
 
     .home-gif {
         max-width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-info {
+        max-width: 100%;
+        text-align: justify;
+    }
+
+    .home-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .home-gif {
+        max-width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    section {
+        padding: 1em;
+        margin: 1em 0;
     }
 }
